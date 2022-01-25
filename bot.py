@@ -91,6 +91,9 @@ def start_bot(start_url, email, college, collegeID, cookies, token):
     print(fc + sd + '[' + fm + sb + '*' + fc + sd + '] ' + fg + 'Interceptor Addition (success)')
     driver.maximize_window()
 
+    #gb
+    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    
     driver.get('https://www.openccc.net')
     print(fc + sd + '[' + fm + sb + '*' + fc + sd + '] ' + fg + 'Injecting Incap Cookies', end='')
     for cookie in cookies.keys():
